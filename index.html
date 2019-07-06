@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Alex Curran">
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/css/style.css">
+        <title>Sound Machine</title>
+    </head>
+    <body class="body">
+        <header class="header">
+            <h1 class="title">Sound Wurlitzer 2000</h1>
+        </header>
+        <section class="display">Display Animation Here</section>
+        <main class="main">
+            <div class="main-key key1">
+                <kbd class="main-key-letter">S</kbd>
+                <audio class="sound" data-keycode="83" src="./sounds/boom.wav"></audio>
+            </div>
+            <div class="main-key key2">
+                <kbd class="main-key-letter">D</kbd>
+                <audio class="sound" data-keycode="68" src="./sounds/clap.wav"></audio>
+            </div>
+            <div class="main-key key3">
+                <kbd class="main-key-letter">F</kbd>
+                <audio class="sound" data-keycode="70" src="./sounds/clay.mp3"></audio>
+            </div>
+            <div class="main-key key4">
+                <kbd class="main-key-letter">J</kbd>
+                <audio class="sound" data-keycode="74" src="./sounds/glimmer.mp3"></audio>
+            </div>
+            <div class="main-key key5">
+                <kbd class="main-key-letter">K</kbd>
+                <audio class="sound" data-keycode="75" src="./sounds/hi-hat.wav"></audio>
+            </div>
+            <div class="main-key key6">
+                <kbd class="main-key-letter">L</kbd>
+                <audio class="sound" data-keycode="76" src=""></audio>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
