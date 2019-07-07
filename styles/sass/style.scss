@@ -34,12 +34,13 @@ html {
 }
 
 .title {
+    font-size: 2.25rem;
     color: #04721f;
     filter: drop-shadow(0px 0px 5px #fff);
 }
 
 .main {
-    margin: 3em;
+    margin: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +48,7 @@ html {
     width: 100;
 
     &-key {
-        margin: .25em;
+        margin: .50em;
         width: calc(4.2rem + 5vw);
         height: calc(4.2rem + 5vw);
         border-radius: 5px;
