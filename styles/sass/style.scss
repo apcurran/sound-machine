@@ -9,11 +9,33 @@ html {
 }
 
 .body {
+    position: relative;
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+
+    // The image is a pseudo-element to apply filter effects.
+    &::after {
+        position: absolute;
+        content: "";
+        min-height: 100vh;
+        width: 100%;
+
+        background-image: url(/images/cassette.jpg);
+        background-size: cover;
+        background-position: 50% 30%;
+        filter: blur(5px) grayscale(1);
+
+        z-index: -1;
+    }
+}
+
+.title {
+    color: #04721f;
+    filter: drop-shadow(0px 0px 5px #fff);
 }
 
 .main {
@@ -25,26 +47,37 @@ html {
     width: 100;
 
     &-key {
-        margin: .2em;
+        margin: .25em;
         width: calc(4.2rem + 5vw);
         height: calc(4.2rem + 5vw);
+        border-radius: 5px;
         background-color: #129ac7;
         color: #fff;
-        box-shadow: 0px 0px 7px 0px #0e6b8a;
+        box-shadow: 0px 0px 0px 0px #03bd22;
         display: flex;
         justify-content: center;
         align-items: center;
 
         cursor: pointer;
-        transition: transform 40ms ease-in-out;
+        transition: transform 50ms ease-in-out,
+                    box-shadow 50ms ease-in-out;
 
+        // Click animation
         &:active {
             transform: scale(.9);
             background-color: #0e6b8a;
+            box-shadow: 0px 0px 12px 8px #03bd9e;
         }
 
         &-letter {
             font-size: 3.5rem;
         }
     }
+}
+
+// Keypress animation
+.active {
+    transform: scale(.9);
+    background-color: #0e6b8a;
+    box-shadow: 0px 0px 12px 8px #03bd9e;
 }
